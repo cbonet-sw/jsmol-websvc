@@ -26,7 +26,7 @@
         jarFile: "JmolAppletSigned0.jar",
         isSigned: true,
           // Indicate that the signed applet will be used
-        console: "JmolEmbed0_infodiv",
+        console: "tempconsole", //"JmolEmbed0_infodiv",
         readyFunction: readyfunc
           // Callback function for when the JSmol system is ready
       };
@@ -45,7 +45,7 @@
       //  This is best found by trial and error for the molecules concerned,
       //   using the Jmol.jar stand-alone Java application.
       Jmol.script(JmolEmbed0, "axesOrientationRasmol=true; set measurementUnits angstroms; set bondTolerance 1.0; load "+filestem+".spt");
-    </script>
+    </script>  
     <!-- As in the example at https://teaching.ncl.ac.uk/chemmodels/jmolapps/muchiral/showjmol.php?use=HTML5&filestem=b1df
         we use a table to arrange some buttons to control the JSmol interface -->
     <table>
@@ -68,5 +68,6 @@
       </tr>
     </table>
     <p>(To measure, double click first and last atom of measurement)</p>
+    <div id="tempconsole"></div>
   </body>
 </html>
