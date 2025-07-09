@@ -1,0 +1,63 @@
+#!rasmol -script
+
+load "b1df.xyz"
+reset
+rotate y -140
+rotate z -90
+rotate x -10
+rotate y -3
+
+zoom 100
+
+# white background
+background [255,255,255]
+set ambient 65
+set specular on
+set specpower 20
+
+slab off
+
+set axes off
+set boundingbox off
+set unitcell off
+set bondmode and
+dots off
+
+
+# Avoid Colour Problems!
+select all
+colour bonds none
+colour white
+
+# Elements
+select elemno=1
+colour atoms [255,255,255]
+select elemno=6
+colour atoms [120,120,120]
+select elemno=7
+colour atoms [20,20,255]
+select elemno=15
+colour atoms [200,0,200]
+select elemno=16
+colour atoms [255,210,0]
+
+select all
+wireframe 40
+
+# for Jmol
+spacefill off
+
+select not (elemno=1 or elemno=6)
+
+#atoms
+spacefill 140
+# for Jmol
+# set shadow off
+
+# Bonds
+wireframe 60
+
+select all
+
+# Labels
+labels off
