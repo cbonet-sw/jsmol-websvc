@@ -12,7 +12,7 @@
         Jmol.script(JmolEmbed0, "select all ; zoom 60;");
       };
       var Info = {
-        height: "80%",
+        height: 400, // "80%",
         width: "100%",
           // Let the applet fill the whole width of the popup, but leave some space at the
           // bottom of the window for any html output
@@ -27,8 +27,9 @@
         isSigned: true,
           // Indicate that the signed applet will be used
         console: "tempconsole", //"JmolEmbed0_infodiv",
-        readyFunction: readyfunc
+        readyFunction: readyfunc,
           // Callback function for when the JSmol system is ready
+	debug: true
       };
     </script>
   </head>
